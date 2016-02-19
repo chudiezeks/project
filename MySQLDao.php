@@ -46,7 +46,7 @@ return $returnValue;
 
 public function getUserDetailsWithPassword($email, $user-Password) {
 $returnValue = array();
-$sql = "select id,user_email from users where user_email='" . $email . "' and user_password='" .$userPassword . "'";
+$sql = "select id,user_email from users where user_email='" . $email . "' and user_password='" . $userPassword . "'";
 
 $result = $this->conn->query($sql);
 if($result != null && (mysql_num_rows($result) >= 1)) {
